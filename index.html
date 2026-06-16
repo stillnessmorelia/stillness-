@@ -1,0 +1,1329 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STILLNESS | Massage & Wellness - Servicio a Domicilio Premium</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        :root {
+            --primary: #1e2522; /* Grafito orgánico profundo */
+            --primary-light: #2c3531;
+            --accent: #bfa37a;  /* Oro wellness sutil */
+            --accent-light: #f5f2eb; /* Fondo cálido premium */
+            --bg-light: #faf9f6; /* Off-white premium */
+            --text-main: #2d312e;
+            --text-muted: #606662;
+            --white: #ffffff;
+            --sans: 'Plus Jakarta Sans', sans-serif;
+            --serif: 'Cormorant Garamond', serif;
+            --transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--sans);
+            background-color: var(--bg-light);
+            color: var(--text-main);
+            line-height: 1.7;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Utilidades de espaciado Premium */
+        section {
+            padding: 140px 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .container-fluid {
+            max-width: 100%;
+            background-color: var(--white);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .section-title span {
+            font-family: var(--sans);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: var(--accent);
+            display: block;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .section-title h2 {
+            font-family: var(--serif);
+            font-size: 3rem;
+            color: var(--primary);
+            font-weight: 400;
+            letter-spacing: -0.5px;
+        }
+
+        /* Botones Premium */
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background-color: var(--primary);
+            color: var(--white);
+            text-decoration: none;
+            padding: 18px 36px;
+            border-radius: 0;
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: var(--transition);
+            border: 1px solid var(--primary);
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            background-color: transparent;
+            color: var(--primary);
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background-color: transparent;
+            color: var(--primary);
+            text-decoration: none;
+            padding: 16px 32px;
+            border: 1px solid #d1cbbf;
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: var(--transition);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--primary);
+            background-color: rgba(30, 37, 34, 0.02);
+        }
+
+        /* Header / Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            background-color: rgba(250, 249, 246, 0.85);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(30, 37, 34, 0.04);
+            transition: var(--transition);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            text-align: center;
+            text-decoration: none;
+            color: var(--primary);
+        }
+
+        .logo h1 {
+            font-family: var(--serif);
+            font-size: 1.6rem;
+            letter-spacing: 6px;
+            font-weight: 400;
+            line-height: 1;
+        }
+
+        .logo span {
+            font-size: 0.6rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            display: block;
+            margin-top: 4px;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 140px;
+            position: relative;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 60px;
+            align-items: center;
+            width: 100%;
+        }
+
+        .hero-tag {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 24px;
+            display: inline-block;
+        }
+
+        .hero h2 {
+            font-family: var(--serif);
+            font-size: 4.5rem;
+            line-height: 1.1;
+            color: var(--primary);
+            font-weight: 400;
+            margin-bottom: 32px;
+            letter-spacing: -1px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 540px;
+            margin-bottom: 48px;
+        }
+
+        .hero-badges {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            border-top: 1px solid rgba(30, 37, 34, 0.1);
+            padding-top: 40px;
+            margin-top: 12px;
+        }
+
+        .badge-item {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .badge-item i {
+            color: var(--accent);
+        }
+
+        .badge-item span {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--primary);
+            letter-spacing: 0.5px;
+        }
+
+        .hero-image-container {
+            position: relative;
+            height: 600px;
+            background-color: var(--accent-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .hero-placeholder-art {
+            text-align: center;
+            color: rgba(30, 37, 34, 0.15);
+        }
+
+        .hero-placeholder-art i {
+            font-size: 4rem;
+            margin-bottom: 16px;
+            stroke-width: 0.75;
+        }
+
+        /* Servicios */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+
+        .service-card {
+            background-color: var(--white);
+            border: 1px solid rgba(30, 37, 34, 0.05);
+            padding: 60px 48px;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(30, 37, 34, 0.02);
+            border-color: rgba(191, 163, 122, 0.3);
+        }
+
+        .service-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 24px;
+            border-bottom: 1px solid rgba(30, 37, 34, 0.05);
+            padding-bottom: 24px;
+        }
+
+        .service-header h3 {
+            font-family: var(--serif);
+            font-size: 2.2rem;
+            font-weight: 400;
+            color: var(--primary);
+            letter-spacing: 0.5px;
+        }
+
+        .service-price {
+            font-family: var(--sans);
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: var(--accent);
+        }
+
+        .service-card p {
+            color: var(--text-muted);
+            margin-bottom: 32px;
+            font-size: 0.95rem;
+        }
+
+        .service-actions {
+            display: flex;
+            gap: 16px;
+        }
+
+        /* Modales Elegantes */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(30, 37, 34, 0.4);
+            backdrop-filter: blur(8px);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s ease;
+        }
+
+        .modal.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .modal-content {
+            background-color: var(--bg-light);
+            max-width: 600px;
+            width: 90%;
+            padding: 48px;
+            position: relative;
+            transform: translateY(30px);
+            transition: var(--transition);
+        }
+
+        .modal.active .modal-content {
+            transform: translateY(0);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--primary);
+            transition: var(--transition);
+        }
+
+        .modal-close:hover {
+            color: var(--accent);
+        }
+
+        .modal h3 {
+            font-family: var(--serif);
+            font-size: 2.5rem;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+
+        .modal h4 {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent);
+            margin: 24px 0 12px 0;
+        }
+
+        .modal ul {
+            list-style: none;
+        }
+
+        .modal ul li {
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text-main);
+        }
+
+        .modal ul li i {
+            color: var(--accent);
+            width: 16px;
+        }
+
+        .modal-footer {
+            margin-top: 40px;
+            border-top: 1px solid rgba(30, 37, 34, 0.08);
+            padding-top: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Sobre el Terapeuta */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .about-image {
+            height: 550px;
+            background-color: #eeebe3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .about-image::after {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: -20px;
+            width: 100%;
+            height: 100%;
+            border: 1px solid #d1cbbf;
+            z-index: -1;
+        }
+
+        .about-meta h3 {
+            font-family: var(--serif);
+            font-size: 3.5rem;
+            font-weight: 400;
+            line-height: 1;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+
+        .about-meta .subtitle {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 32px;
+            display: block;
+        }
+
+        .about-text {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            margin-bottom: 40px;
+            max-width: 540px;
+        }
+
+        .specialties-container h4 {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .specialties-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .specialty-tag {
+            background-color: var(--white);
+            border: 1px solid rgba(30, 37, 34, 0.06);
+            padding: 10px 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--primary);
+            transition: var(--transition);
+        }
+
+        .specialty-tag:hover {
+            border-color: var(--accent);
+            background-color: var(--accent-light);
+        }
+
+        /* Formación y Certificaciones */
+        .certifications {
+            background-color: var(--accent-light);
+        }
+
+        .cert-intro {
+            text-align: center;
+            max-width: 650px;
+            margin: -40px auto 60px auto;
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .cert-card {
+            background-color: var(--white);
+            padding: 24px;
+            border-radius: 4px;
+            box-shadow: 0 10px 30px rgba(30, 37, 34, 0.02);
+            transition: var(--transition);
+        }
+
+        .cert-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .cert-img-wrapper {
+            width: 100%;
+            height: 480px;
+            overflow: hidden;
+            background-color: #f0f0f0;
+            position: relative;
+            cursor: pointer;
+            border: 1px solid rgba(30, 37, 34, 0.08);
+        }
+
+        .cert-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        .cert-img-wrapper:hover img {
+            transform: scale(1.03);
+        }
+
+        .cert-zoom-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(30, 37, 34, 0.2);
+            opacity: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            transition: var(--transition);
+        }
+
+        .cert-img-wrapper:hover .cert-zoom-overlay {
+            opacity: 1;
+        }
+
+        .cert-info {
+            margin-top: 24px;
+        }
+
+        .cert-info h3 {
+            font-family: var(--serif);
+            font-size: 1.6rem;
+            font-weight: 400;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .cert-info p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .cert-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            border-top: 1px solid rgba(30, 37, 34, 0.08);
+            padding-top: 40px;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .stat-box h4 {
+            font-family: var(--serif);
+            font-size: 3rem;
+            font-weight: 400;
+            color: var(--primary);
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .stat-box p {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        /* Lightbox para imágenes reales */
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(30, 37, 34, 0.95);
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s ease;
+            padding: 24px;
+        }
+
+        .lightbox.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .lightbox-img {
+            max-width: 90%;
+            max-height: 85vh;
+            object-fit: contain;
+            transform: scale(0.95);
+            transition: var(--transition);
+        }
+
+        .lightbox.active .lightbox-img {
+            transform: scale(1);
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 32px;
+            right: 32px;
+            background: none;
+            border: none;
+            color: var(--white);
+            cursor: pointer;
+        }
+
+        /* Qué incluye cada sesión */
+        .includes-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        .include-card {
+            background-color: var(--white);
+            padding: 40px;
+            border: 1px solid rgba(30, 37, 34, 0.03);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .include-card i {
+            color: var(--accent);
+            stroke-width: 1.25;
+        }
+
+        .include-card h3 {
+            font-size: 1.05rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            color: var(--primary);
+        }
+
+        /* Cómo funciona */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            padding-left: 40px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 7px;
+            width: 1px;
+            height: 100%;
+            background-color: rgba(30, 37, 34, 0.1);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 56px;
+        }
+
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: -40px;
+            top: 6px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: var(--accent);
+            border: 4px solid var(--bg-light);
+            z-index: 2;
+        }
+
+        .timeline-content span {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent);
+            font-weight: 600;
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        .timeline-content h3 {
+            font-family: var(--serif);
+            font-size: 1.8rem;
+            font-weight: 400;
+            color: var(--primary);
+            margin-bottom: 12px;
+        }
+
+        .timeline-content p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            max-width: 600px;
+        }
+
+        /* Galería */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .gallery-item {
+            height: 300px;
+            background-color: #eeebe3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(30, 37, 34, 0.2);
+            transition: var(--transition);
+            border-radius: 2px;
+        }
+
+        .gallery-item:hover {
+            background-color: #e3dec3;
+        }
+
+        /* Preguntas Frecuentes */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid rgba(30, 37, 34, 0.08);
+            padding: 24px 0;
+        }
+
+        .faq-trigger {
+            width: 100%;
+            background: none;
+            border: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: left;
+            cursor: pointer;
+            padding: 8px 0;
+        }
+
+        .faq-trigger h3 {
+            font-size: 1.15rem;
+            font-weight: 500;
+            color: var(--primary);
+            font-family: var(--sans);
+        }
+
+        .faq-trigger i {
+            color: var(--accent);
+            transition: transform 0.3s ease;
+        }
+
+        .faq-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        .faq-content p {
+            padding-top: 16px;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .faq-item.active .faq-trigger i {
+            transform: rotate(180deg);
+        }
+
+        /* CTA Final */
+        .cta-section {
+            background-color: var(--primary);
+            color: var(--white);
+            text-align: center;
+            padding: 160px 24px;
+            position: relative;
+        }
+
+        .cta-section h2 {
+            font-family: var(--serif);
+            font-size: 4rem;
+            font-weight: 400;
+            line-height: 1.1;
+            max-width: 800px;
+            margin: 0 auto 24px auto;
+            letter-spacing: -1px;
+        }
+
+        .cta-section p {
+            color: #a3aaa6;
+            font-size: 1.1rem;
+            max-width: 500px;
+            margin: 0 auto 48px auto;
+        }
+
+        .cta-section .btn-primary {
+            background-color: var(--accent);
+            border-color: var(--accent);
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .cta-section .btn-primary:hover {
+            background-color: transparent;
+            color: var(--white);
+            border-color: var(--white);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #171c1a;
+            color: #79807c;
+            padding: 40px 24px;
+            border-top: 1px solid rgba(255, 255, 255, 0.03);
+            font-size: 0.8rem;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .hero-grid, .about-grid {
+                grid-template-columns: 1fr;
+                gap: 60px;
+            }
+            .hero-image-container { height: 450px; }
+            .hero h2 { font-size: 3.5rem; }
+            .services-grid { grid-template-columns: 1fr; }
+            .includes-grid { grid-template-columns: repeat(2, 1fr); }
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 768px) {
+            section { padding: 100px 20px; }
+            .section-title h2 { font-size: 2.3rem; }
+            .cta-section h2 { font-size: 2.5rem; }
+            .cert-grid { grid-template-columns: 1fr; }
+            .cert-img-wrapper { height: 400px; }
+            .includes-grid { grid-template-columns: 1fr; }
+            .hero-badges { grid-template-columns: 1fr; gap: 20px; }
+            .service-card { padding: 40px 24px; }
+            .modal-content { padding: 32px 24px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <h1>STILLNESS</h1>
+                <span>Massage & Wellness</span>
+            </a>
+            <a href="https://wa.me/5211234567890?text=Hola%20Axel,%20me%20gustaría%20agendar%20una%20sesión." class="btn-secondary" style="padding: 10px 20px; font-size: 0.75rem;" target="_blank">Reservar</a>
+        </div>
+    </header>
+
+    <section class="hero" id="inicio">
+        <div class="hero-grid">
+            <div class="hero-content">
+                <span class="hero-tag">Stillness Massage & Wellness</span>
+                <h2>Renovación física y mental profunda en tu hogar</h2>
+                <p>Experiencias terapéuticas exclusivas diseñadas con el máximo rigor académico y técnico. Recuperación muscular avanzada y relajación absoluta sin salir de tu espacio personal.</p>
+                
+                <a href="https://wa.me/5211234567890?text=Hola%20Axel,%20me%20gustaría%20consultar%20disponibilidad." class="btn-primary" target="_blank">
+                    <i data-lucide="calendar"></i> Agendar Sesión Vía WhatsApp
+                </a>
+
+                <div class="hero-badges">
+                    <div class="badge-item">
+                        <i data-lucide="award" size="20"></i>
+                        <span>600 Horas de Formación</span>
+                    </div>
+                    <div class="badge-item">
+                        <i data-lucide="graduation-cap" size="20"></i>
+                        <span>Diplomado Profesional</span>
+                    </div>
+                    <div class="badge-item">
+                        <i data-lucide="home" size="20"></i>
+                        <span>Servicio Estricto a Domicilio</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image-container">
+                <div class="hero-placeholder-art">
+                    <i data-lucide="sparkles"></i>
+                    <p style="font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase;">Premium Experience</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container-fluid" style="background-color: #fff;">
+        <section id="servicios">
+            <div class="section-title">
+                <span>Tratamientos autorizados</span>
+                <h2>Menú de Terapias Exclusivas</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div>
+                        <div class="service-header">
+                            <h3>Masaje Sueco</h3>
+                            <span class="service-price">$500 MXN</span>
+                        </div>
+                        <p>Terapia clásica europea orientada a la relajación total, mejora de la circulación sanguínea y alivio del estrés cotidiano a través de movimientos fluidos y armónicos.</p>
+                    </div>
+                    <div class="service-actions">
+                        <button class="btn-secondary" onclick="openModal('sueco')">Detalles</button>
+                        <a href="https://wa.me/5211234567890?text=Hola%20Axel,%20me%20interesa%20el%20Masaje%20Sueco." class="btn-primary" target="_blank"><i data-lucide="send"></i> Reservar</a>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div>
+                        <div class="service-header">
+                            <h3>Deep Tissue Therapy</h3>
+                            <span class="service-price">$500 MXN</span>
+                        </div>
+                        <p>Manipulación profunda y lenta enfocada en las capas internas del tejido muscular y fascias. Ideal para descontracturar, liberar tensión crónica y restaurar la movilidad.</p>
+                    </div>
+                    <div class="service-actions">
+                        <button class="btn-secondary" onclick="openModal('deep')">Detalles</button>
+                        <a href="https://wa.me/5211234567890?text=Hola%20Axel,%20me%20interesa%20la%20Terapia%20de%20Deep%20Tissue." class="btn-primary" target="_blank"><i data-lucide="send"></i> Reservar</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="modal" id="modal-sueco">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('sueco')"><i data-lucide="x"></i></button>
+            <h3>Masaje Sueco</h3>
+            <p style="color: var(--text-muted);">Un enfoque integral para resetear el sistema nervioso y restaurar el equilibrio fisiológico general.</p>
+            
+            <h4>Beneficios Detallados</h4>
+            <ul>
+                <li><i data-lucide="check"></i> Disminución inmediata del cortisol (estrés)</li>
+                <li><i data-lucide="check"></i> Incremento notable de la oxigenación en tejidos</li>
+                <li><i data-lucide="check"></i> Alivio de la tensión muscular leve y fatiga acumulada</li>
+                <li><i data-lucide="check"></i> Mejora la calidad del sueño profundo</li>
+            </ul>
+            <div class="modal-footer">
+                <span class="service-price">$500 MXN</span>
+                <a href="https://wa.me/5211234567890?text=Quiero%20agendar%20un%20Masaje%20Sueco" class="btn-primary" target="_blank">Agendar Ahora</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="modal-deep">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('deep')"><i data-lucide="x"></i></button>
+            <h3>Deep Tissue Therapy</h3>
+            <p style="color: var(--text-muted);">Terapia de precisión clínica orientada a patrones de tensión específicos y sobrecarga muscular.</p>
+            
+            <h4>Beneficios Detallados</h4>
+            <ul>
+                <li><i data-lucide="check"></i> Eliminación de contracturas rígidas y puntos gatillo</li>
+                <li><i data-lucide="check"></i> Liberación de restricciones en el tejido conectivo (Fascias)</li>
+                <li><i data-lucide="check"></i> Aceleración de la recuperación post-entrenamiento</li>
+                <li><i data-lucide="check"></i> Reducción de dolores crónicos por posturas repetitivas</li>
+            </ul>
+            <div class="modal-footer">
+                <span class="service-price">$500 MXN</span>
+                <a href="https://wa.me/5211234567890?text=Quiero%20agendar%20un%20Deep%20Tissue" class="btn-primary" target="_blank">Agendar Ahora</a>
+            </div>
+        </div>
+    </div>
+
+    <section id="terapeuta">
+        <div class="about-grid">
+            <div class="about-image">
+                <div style="text-align: center; color: rgba(30, 37, 34, 0.2)">
+                    <i data-lucide="user" size="48" style="stroke-width:1;"></i>
+                    <p style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; margin-top: 12px;">Axel Franco Portrait</p>
+                </div>
+            </div>
+            <div class="about-meta">
+                <span>Conoce a tu terapeuta</span>
+                <h3>Axel Franco</h3>
+                <span class="subtitle">Especialista en Masajes y Terapias Spa</span>
+                <p class="about-text">Terapeuta especializado en masaje relajante y terapia muscular profunda. Mi enfoque combina técnica rigurosa, atención personalizada y un ambiente minuciosamente diseñado para promover bienestar físico y mental desde la comodidad de tu hogar.</p>
+                
+                <div class="specialties-container">
+                    <h4>Especialidades Avaladas:</h4>
+                    <div class="specialties-tags">
+                        <span class="specialty-tag">Masaje Sueco</span>
+                        <span class="specialty-tag">Deep Tissue</span>
+                        <span class="specialty-tag">Liberación Miofascial</span>
+                        <span class="specialty-tag">Drenaje Linfático</span>
+                        <span class="specialty-tag">Terapias Spa</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container-fluid certifications">
+        <section id="certificaciones">
+            <div class="section-title">
+                <span>Garantía de Confianza Absoluta</span>
+                <h2>Formación y Certificaciones</h2>
+            </div>
+            <p class="cert-intro">Respaldado formalmente ante la Secretaría de Educación, Registro de Validez Oficial de Estudios (Acuerdo CECAP170734 / Clave 16PBT0004K) e Instituto America Spa Therapy.</p>
+            
+            <div class="cert-grid">
+                <div class="cert-card">
+                    <div class="cert-img-wrapper" onclick="openLightbox('1000253574.jpg')">
+                        <img src="1000253574.jpg" alt="Certificado de Terminación de Estudios - Axel Franco">
+                        <div class="cert-zoom-overlay">
+                            <i data-lucide="maximize-2"></i>
+                        </div>
+                    </div>
+                    <div class="cert-info">
+                        <h3>Certificado de Terminación de Estudios</h3>
+                        <p>Acreditación de asignaturas teóricas y prácticas</p>
+                    </div>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-img-wrapper" onclick="openLightbox('1000253572.png')">
+                        <img src="1000253572.png" alt="Diploma Profesional en Masajes y Terapias Spa - Axel Franco">
+                        <div class="cert-zoom-overlay">
+                            <i data-lucide="maximize-2"></i>
+                        </div>
+                    </div>
+                    <div class="cert-info">
+                        <h3>Diplomado Profesional en Masajes y Terapias Spa</h3>
+                        <p>Título Institucional AST Escuela de Masajes</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cert-stats">
+                <div class="stat-box">
+                    <h4>600</h4>
+                    <p>Horas Teórico-Prácticas</p>
+                </div>
+                <div class="stat-box">
+                    <h4>9.4</h4>
+                    <p>Promedio General</p>
+                </div>
+                <div class="stat-box">
+                    <h4>Morelia</h4>
+                    <p>Michoacán, México</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <button class="lightbox-close"><i data-lucide="x" size="32"></i></button>
+        <img class="lightbox-img" id="lightbox-target" src="" alt="Vista ampliada">
+    </div>
+
+    <section id="incluye">
+        <div class="section-title">
+            <span>Experiencia Atmosférica</span>
+            <h2>¿Qué Incluye Cada Sesión?</h2>
+        </div>
+        <div class="includes-grid">
+            <div class="include-card">
+                <i data-lucide="columns" size="32"></i>
+                <h3>Camilla Profesional</h3>
+            </div>
+            <div class="include-card">
+                <i data-lucide="droplet" size="32"></i>
+                <h3>Aceites Premium</h3>
+            </div>
+            <div class="include-card">
+                <i data-lucide="wind" size="32"></i>
+                <h3>Aromaterapia</h3>
+            </div>
+            <div class="include-card">
+                <i data-lucide="music" size="32"></i>
+                <h3>Música Relajante</h3>
+            </div>
+            <div class="include-card">
+                <i data-lucide="heart" size="32"></i>
+                <h3>Atención Personalizada</h3>
+            </div>
+            <div class="include-card">
+                <i data-lucide="shield-check" size="32"></i>
+                <h3>Protocolos de Higiene</h3>
+            </div>
+        </div>
+    </section>
+
+    <div class="container-fluid" style="background-color: var(--white);">
+        <section id="proceso">
+            <div class="section-title">
+                <span>Paso a Paso</span>
+                <h2>¿Cómo Funciona el Servicio?</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span>Paso 01</span>
+                        <h3>Reserva por WhatsApp</h3>
+                        <p>Eliges la terapia de tu preferencia y nos envías un mensaje para coordinar la fecha ideal.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span>Paso 02</span>
+                        <h3>Confirmación de Horario</h3>
+                        <p>Validamos tu ubicación geográfica dentro de nuestra zona de cobertura y agendamos formalmente la hora exacta.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span>Paso 03</span>
+                        <h3>Preparación del Espacio</h3>
+                        <p>Llegamos a tu domicilio con todo lo necesario (camilla, sábanas, aceites y música). Solo requerimos un área despejada mínima.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span>Paso 04</span>
+                        <h3>Sesión Personalizada</h3>
+                        <p>Disfrutas de un tratamiento clínico enfocado completamente en tus necesidades físicas o de relajación actuales.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span>Paso 05</span>
+                        <h3>Recomendaciones Posteriores</h3>
+                        <p>Al finalizar la sesión, te brindamos sugerencias posturales o de estiramiento para prolongar los efectos benéficos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <section id="galeria">
+        <div class="section-title">
+            <span>Espacios de Trabajo</span>
+            <h2>Galería de Marca</h2>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item"><i data-lucide="camera" size="24"></i></div>
+            <div class="gallery-item"><i data-lucide="camera" size="24"></i></div>
+            <div class="gallery-item"><i data-lucide="camera" size="24"></i></div>
+            <div class="gallery-item"><i data-lucide="camera" size="24"></i></div>
+        </div>
+    </section>
+
+    <div class="container-fluid" style="background-color: var(--white);">
+        <section id="faq">
+            <div class="section-title">
+                <span>Dudas Frecuentes</span>
+                <h2>Respuestas Clave</h2>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-trigger" onclick="toggleFaq(this)">
+                        <h3>¿Necesito tener camilla?</h3>
+                        <i data-lucide="chevron-down"></i>
+                    </button>
+                    <div class="faq-content">
+                        <p>No, yo me encargo de llevar una camilla profesional de masaje de alta gama, sábanas limpias y todo el equipo necesario para montar un spa privado en tu hogar.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-trigger" onclick="toggleFaq(this)">
+                        <h3>¿Aceptas transferencia?</h3>
+                        <i data-lucide="chevron-down"></i>
+                    </button>
+                    <div class="faq-content">
+                        <p>Sí, acepto pagos en efectivo y transferencias electrónicas bancarias el mismo día de la sesión al finalizar el servicio.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-trigger" onclick="toggleFaq(this)">
+                        <h3>¿Cuánto espacio necesito?</h3>
+                        <i data-lucide="chevron-down"></i>
+                    </button>
+                    <div class="faq-content">
+                        <p>Únicamente se necesita un espacio libre aproximado de 2x2 metros para poder desplegar e instalar la camilla de forma cómoda y permitir la libre circulación alrededor.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-trigger" onclick="toggleFaq(this)">
+                        <h3>¿Atiendes hombres y mujeres?</h3>
+                        <i data-lucide="chevron-down"></i>
+                    </button>
+                    <div class="faq-content">
+                        <p>Sí, ofrezco mis servicios profesionales a todo el público, manteniendo siempre un código ético riguroso y de estricto respeto mutuo.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-trigger" onclick="toggleFaq(this)">
+                        <h3>¿A qué zonas te desplazas?</h3>
+                        <i data-lucide="chevron-down"></i>
+                    </button>
+                    <div class="faq-content">
+                        <p>Ofrezco servicio a domicilio en toda el área central de la ciudad de Morelia, Michoacán. Para zonas periféricas o con accesos especiales, puedes consultarme directamente al agendar.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="cta-section">
+        <h2>Tu bienestar comienza con una sola reserva</h2>
+        <p>Inicia tu proceso de recuperación física de la mano de un terapeuta debidamente certificado.</p>
+        <a href="https://wa.me/5211234567890?text=Hola%20Axel,%20deseo%20agendar%20mi%20sesión%20hoy." class="btn-primary" target="_blank">
+            <i data-lucide="phone"></i> Contactar por WhatsApp
+        </a>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 STILLNESS Massage & Wellness. Todos los derechos reservados. Morelia, Michoacán.</p>
+    </footer>
+
+    <script>
+        // Inicializar iconos de Lucide
+        lucide.createIcons();
+
+        // Funciones de Modales de Detalles
+        function openModal(id) {
+            document.getElementById(`modal-${id}`).classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(id) {
+            document.getElementById(`modal-${id}`).classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Función del Acordeón FAQ
+        function toggleFaq(button) {
+            const item = button.parentElement;
+            const content = button.nextElementSibling;
+            
+            document.querySelectorAll('.faq-item').forEach(el => {
+                if (el !== item && el.classList.contains('active')) {
+                    el.classList.remove('active');
+                    el.querySelector('.faq-content').style.maxHeight = null;
+                }
+            });
+
+            if (item.classList.contains('active')) {
+                item.classList.remove('active');
+                content.style.maxHeight = null;
+            } else {
+                item.classList.add('active');
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        }
+
+        // Funciones de Lightbox (Galería de Certificados Reales)
+        function openLightbox(imgSrc) {
+            const lightbox = document.getElementById('lightbox');
+            const targetImg = document.getElementById('lightbox-target');
+            targetImg.src = imgSrc;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+    </script>
+</body>
+</html>
