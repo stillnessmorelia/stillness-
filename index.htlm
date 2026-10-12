@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>STILLNESS | Masajes a domicilio en CDMX</title>
+<meta name="description" content="Masajes profesionales a domicilio en Benito Juárez y Coyoacán, CDMX. Masaje sueco y deep tissue de 60 minutos. Reserva por WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@0.263.1/dist/umd/lucide.min.js"></script>
+<style>
+:root{--p:#1e2522;--a:#bfa37a;--al:#f5f2eb;--bg:#faf9f6;--tm:#2d312e;--mu:#606662;--w:#fff;--sans:'Plus Jakarta Sans',sans-serif;--serif:'Cormorant Garamond',serif;--t:all .4s cubic-bezier(.25,1,.5,1)}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--bg);color:var(--tm);line-height:1.7;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+section{padding:110px 24px;max-width:1200px;margin:0 auto}
+.band{background:var(--w)}.warm{background:var(--al)}
+.st{text-align:center;margin-bottom:56px}
+.st h2{font-family:var(--serif);font-size:3rem;color:var(--p);font-weight:400;line-height:1.15}
+.st p{color:var(--mu);margin-top:12px}
+svg{color:var(--a)}
+.btn{display:inline-flex;align-items:center;gap:12px;background:var(--p);color:var(--w);text-decoration:none;padding:18px 36px;font-size:.9rem;font-weight:500;letter-spacing:1px;transition:var(--t);border:1px solid var(--p);cursor:pointer}
+.btn:hover{background:transparent;color:var(--p)}
+.btn svg{color:inherit}
+.btn.s{background:transparent;color:var(--p);border-color:#d1cbbf;padding:10px 20px;font-size:.85rem}
+.btn.s:hover{border-color:var(--p)}
+:focus-visible{outline:2px solid var(--a);outline-offset:3px}
+header{position:fixed;top:0;left:0;width:100%;z-index:100;background:rgba(250,249,246,.92);backdrop-filter:blur(20px);border-bottom:1px solid rgba(30,37,34,.04)}
+.nav{max-width:1200px;margin:0 auto;padding:18px 24px;display:flex;justify-content:space-between;align-items:center}
+.logo{text-align:center;text-decoration:none;color:var(--p)}
+.logo b{display:block;font-family:var(--serif);font-size:1.6rem;letter-spacing:6px;font-weight:400;line-height:1}
+.logo small{font-size:.65rem;letter-spacing:3px;color:var(--mu);display:block;margin-top:4px}
+.hero{min-height:100vh;display:flex;align-items:center;padding-top:120px}
+.grid2{display:grid;grid-template-columns:1.2fr .8fr;gap:60px;align-items:center;width:100%}
+.hero h1{font-family:var(--serif);font-size:4.2rem;line-height:1.08;color:var(--p);font-weight:400;margin-bottom:24px;letter-spacing:-1px}
+.hero p{font-size:1.1rem;color:var(--mu);max-width:520px;margin-bottom:36px}
+.badges{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;border-top:1px solid rgba(30,37,34,.1);padding-top:32px;margin-top:40px}
+.badges div{display:flex;flex-direction:column;gap:8px;font-size:.9rem;font-weight:500;color:var(--p)}
+.offer{background:var(--al);padding:56px 36px;text-align:center;border-radius:4px}
+.offer span{display:block;color:var(--mu)}
+.offer strong{display:block;font-family:var(--serif);font-size:4.2rem;font-weight:400;color:var(--p);line-height:1.15;margin:8px 0}
+.offer s{color:var(--mu)}
+.hero .offer p{font-size:.9rem;margin:16px auto 0}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:40px}
+.card{background:var(--bg);border:1px solid rgba(30,37,34,.06);padding:48px 40px;display:flex;flex-direction:column;justify-content:space-between;gap:28px}
+.card h3{font-family:var(--serif);font-size:2.2rem;font-weight:400;color:var(--p)}
+.price{font-size:1.25rem;font-weight:500;color:var(--p);margin:6px 0 18px}
+.price s{color:var(--mu);font-size:.95rem;font-weight:400;margin:0 8px}
+.price small{color:var(--mu);font-weight:400}
+.card p,.card li{color:var(--mu);font-size:.95rem}
+.card ul{list-style:none;margin-top:14px}
+.card li{margin-bottom:6px;padding-left:18px;position:relative}
+.card li:before{content:"–";position:absolute;left:0;color:var(--a)}
+.note{text-align:center;color:var(--mu);font-size:.85rem;margin:32px auto 0;max-width:640px}
+.about{max-width:720px;margin:0 auto;text-align:center}
+.about h2{font-family:var(--serif);font-size:3.4rem;font-weight:400;line-height:1.1}
+.about .sub{color:var(--a);font-weight:600;margin:6px 0 28px}
+.about p{color:var(--mu);font-size:1.05rem;margin-bottom:28px}
+.tags{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.tags span{background:var(--w);border:1px solid rgba(30,37,34,.08);padding:10px 20px;font-size:.9rem;font-weight:500;color:var(--p)}
+.certg{display:grid;grid-template-columns:repeat(2,1fr);gap:40px;margin-bottom:48px}
+.certc{background:var(--w);padding:24px}
+.imgw{height:440px;overflow:hidden;background:#f0f0f0;cursor:zoom-in;border:1px solid rgba(30,37,34,.08)}
+.imgw img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.imgw:hover img{transform:scale(1.03)}
+.certc h3{font-family:var(--serif);font-size:1.5rem;font-weight:400;margin-top:20px;color:var(--p)}
+.certc p{font-size:.85rem;color:var(--mu)}
+.reg{text-align:center;color:var(--mu);font-size:.9rem;margin-bottom:40px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;border-top:1px solid rgba(30,37,34,.08);padding-top:36px;max-width:800px;margin:0 auto;text-align:center}
+.stats b{display:block;font-family:var(--serif);font-size:3rem;font-weight:400;line-height:1;color:var(--p)}
+.stats span{font-size:.85rem;color:var(--mu);font-weight:500}
+.lb{position:fixed;inset:0;background:rgba(30,37,34,.95);z-index:2000;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .4s;padding:24px}
+.lb.on{opacity:1;pointer-events:auto}
+.lb img{max-width:100%;max-height:88vh;object-fit:contain}
+.lb button{position:absolute;top:20px;right:24px;background:none;border:0;color:#fff;font-size:2.2rem;cursor:pointer}
+.inc{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.inc div{background:var(--w);padding:32px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:12px;font-weight:500;color:var(--p);border:1px solid rgba(30,37,34,.05)}
+.tl{max-width:800px;margin:0 auto;padding-left:40px;position:relative}
+.tl:before{content:'';position:absolute;top:0;left:7px;width:1px;height:100%;background:rgba(30,37,34,.12)}
+.tl div{position:relative;margin-bottom:44px}
+.tl div:last-child{margin-bottom:0}
+.tl div:before{content:'';position:absolute;left:-40px;top:8px;width:15px;height:15px;border-radius:50%;background:var(--a);border:4px solid var(--bg)}
+.tl h3{font-family:var(--serif);font-size:1.7rem;font-weight:400;margin-bottom:6px;color:var(--p)}
+.tl p{color:var(--mu);font-size:.95rem;max-width:600px}
+.faq{max-width:800px;margin:0 auto}
+.faq div{border-bottom:1px solid rgba(30,37,34,.1);padding:14px 0}
+.faq button{width:100%;background:none;border:0;display:flex;justify-content:space-between;align-items:center;gap:16px;text-align:left;cursor:pointer;padding:8px 0;font:500 1.1rem var(--sans);color:var(--p)}
+.faq button:after{content:'+';color:var(--a);font-size:1.5rem}
+.faq .open button:after{content:'–'}
+.faq p{max-height:0;overflow:hidden;color:var(--mu);font-size:.95rem;transition:max-height .3s}
+.cta{background:var(--p);color:var(--w);text-align:center;padding:120px 24px}
+.cta h2{font-family:var(--serif);font-size:3.6rem;font-weight:400;line-height:1.1;max-width:800px;margin:0 auto 20px}
+.cta p{color:#a3aaa6;max-width:500px;margin:0 auto 40px}
+.cta .btn{background:var(--a);border-color:var(--a);color:var(--p);font-weight:600}
+.cta .btn:hover{background:transparent;color:var(--w);border-color:var(--w)}
+footer{background:#171c1a;color:#8b928e;padding:36px 24px;font-size:.85rem;text-align:center}
+@media(max-width:1024px){.grid2{grid-template-columns:1fr;gap:48px}.cards{grid-template-columns:1fr}.inc{grid-template-columns:repeat(2,1fr)}.hero h1{font-size:3.2rem}}
+@media(max-width:768px){section{padding:72px 20px}.st h2{font-size:2.2rem}.cta h2{font-size:2.4rem}.certg{grid-template-columns:1fr}.imgw{height:380px}.inc{grid-template-columns:1fr}.badges{grid-template-columns:1fr;gap:16px}.card{padding:36px 24px}.hero{min-height:auto}.hero h1{font-size:2.6rem}.stats b{font-size:2.2rem}.offer strong{font-size:3.2rem}.about h2{font-size:2.6rem}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header><div class="nav">
+<a href="#" class="logo"><b>STILLNESS</b><small>Massage &amp; Wellness</small></a>
+<a href="https://wa.me/524437339948?text=Hola%2C%20quiero%20agendar%20una%20sesi%C3%B3n." class="btn s" target="_blank" rel="noopener">Reservar</a>
+</div></header>
+
+<section class="hero"><div class="grid2">
+<div>
+<h1>Masajes profesionales a domicilio en CDMX</h1>
+<p>Relajación y alivio de tensión muscular en tu casa. Llevo camilla, sábanas y aceites; tú solo reservas.</p>
+<a href="https://wa.me/524437339948?text=Hola%2C%20quiero%20consultar%20disponibilidad." class="btn" target="_blank" rel="noopener"><i data-lucide="calendar"></i> Reservar por WhatsApp</a>
+<div class="badges">
+<div><i data-lucide="award"></i>600 horas de formación</div>
+<div><i data-lucide="graduation-cap"></i>Diplomado profesional</div>
+<div><i data-lucide="home"></i>Servicio a domicilio</div>
+</div></div>
+<div class="offer">
+<span>Sesión de 60 minutos</span>
+<strong>$600</strong>
+<span><s>$800</s> Precio de lanzamiento</span>
+<p>Para las primeras 5 reservas. Se pide un anticipo de $200 para apartar tu horario.</p>
+</div>
+</div></section>
+
+<div class="band"><section id="servicios">
+<div class="st"><h2>Masajes a domicilio</h2><p>Benito Juárez y Coyoacán, CDMX</p></div>
+<div class="cards">
+<div class="card"><div>
+<h3>Masaje sueco</h3>
+<div class="price">$600 <s>$800</s> <small>60 min</small></div>
+<p>Maniobras suaves y continuas para relajarte y soltar la tensión del día.</p>
+<ul><li>Ritmo pausado, presión suave a media</li><li>Ideal si buscas desconectar</li></ul></div>
+<a href="https://wa.me/524437339948?text=Hola%2C%20me%20interesa%20el%20masaje%20sueco." class="btn" target="_blank" rel="noopener"><i data-lucide="send"></i> Reservar</a></div>
+<div class="card"><div>
+<h3>Deep tissue</h3>
+<div class="price">$600 <s>$800</s> <small>60 min</small></div>
+<p>Presión firme y lenta en zonas de tensión como espalda, cuello y hombros.</p>
+<ul><li>Presión más intensa, ajustada a tu tolerancia</li><li>Ideal después de jornadas largas sentado</li></ul></div>
+<a href="https://wa.me/524437339948?text=Hola%2C%20me%20interesa%20el%20deep%20tissue." class="btn" target="_blank" rel="noopener"><i data-lucide="send"></i> Reservar</a></div>
+</div>
+<p class="note">Los masajes son para relajación y bienestar; no sustituyen atención médica. Avísame de lesiones o condiciones de salud antes de la sesión.</p>
+</section></div>
+
+<section id="terapeuta"><div class="about">
+<h2>Axel Franco</h2>
+<div class="sub">Terapeuta en masajes y terapias spa</div>
+<p>Soy terapeuta en masajes y terapias spa, formado en Morelia con 600 horas teórico-prácticas. Atiendo a domicilio, con atención personalizada y respeto profesional en cada sesión.</p>
+<div class="tags"><span>Masaje sueco</span><span>Deep tissue</span></div>
+</div></section>
+
+<div class="warm"><section id="formacion">
+<div class="st"><h2>Estudios y certificaciones</h2></div>
+<div class="certg">
+<div class="certc"><div class="imgw"><img src="certificado-estudios.jpg" alt="Certificado de terminación de estudios de Axel Franco" loading="lazy"></div>
+<h3>Certificado de terminación de estudios</h3><p>Asignaturas teóricas y prácticas acreditadas</p></div>
+<div class="certc"><div class="imgw"><img src="diplomado-profesional.jpg" alt="Diplomado profesional en masajes y terapias spa de Axel Franco" loading="lazy"></div>
+<h3>Diplomado profesional en masajes y terapias spa</h3><p>AST Escuela de Masajes</p></div>
+</div>
+<p class="reg">Estudios con Registro de Validez Oficial (Acuerdo CECAP170734 / Clave 16PBT0004K)</p>
+<div class="stats"><div><b>600</b><span>horas teórico-prácticas</span></div><div><b>9.4</b><span>promedio general</span></div><div><b>Morelia</b><span>lugar de estudios</span></div></div>
+</section></div>
+
+<section id="sesion">
+<div class="st"><h2>Qué incluye cada sesión</h2></div>
+<div class="inc">
+<div><i data-lucide="bed"></i>Camilla profesional</div>
+<div><i data-lucide="droplets"></i>Aceites de masaje</div>
+<div><i data-lucide="sparkles"></i>Aromaterapia</div>
+<div><i data-lucide="music"></i>Música relajante</div>
+<div><i data-lucide="user-check"></i>Atención personalizada</div>
+<div><i data-lucide="shield-check"></i>Protocolos de higiene</div>
+</div></section>
+
+<div class="band"><section id="como">
+<div class="st"><h2>Cómo funciona</h2></div>
+<div class="tl">
+<div><h3>1. Reserva por WhatsApp</h3><p>Eliges el masaje y me escribes para coordinar día y hora.</p></div>
+<div><h3>2. Confirmación y anticipo</h3><p>Confirmo que tu domicilio está en mi zona de servicio y aparto el horario con un anticipo de $200 por transferencia.</p></div>
+<div><h3>3. Preparación del espacio</h3><p>Llego puntual con camilla, sábanas y aceites. Solo necesito un espacio libre de unos 2x2 metros.</p></div>
+<div><h3>4. Valoración y sesión</h3><p>Antes de empezar hablamos de tus molestias, preferencias de presión y zonas que prefieras evitar. Después, el masaje.</p></div>
+<div><h3>5. Cierre y seguimiento</h3><p>Al terminar te doy recomendaciones sencillas de estiramiento y al día siguiente te escribo para saber cómo te sentiste.</p></div>
+</div></section></div>
+
+<section id="faq">
+<div class="st"><h2>Preguntas frecuentes</h2></div>
+<div class="faq">
+<div><button>¿Cuánto dura la sesión?</button><p>60 minutos de masaje. Llego unos minutos antes para montar la camilla.</p></div>
+<div><button>¿Cómo se paga?</button><p>Se pide un anticipo de $200 por transferencia para apartar tu horario. El resto se paga en efectivo o transferencia al terminar.</p></div>
+<div><button>¿Y si necesito cancelar?</button><p>Avísame con al menos 4 horas de anticipación y reprogramamos sin costo. Si no hay aviso, el anticipo no se reembolsa.</p></div>
+<div><button>¿Es seguro recibir a alguien que no conozco?</button><p>Confirmo cada reserva por WhatsApp, atiendo solo con cita previa y mantengo límites profesionales en todo momento. Si te da más tranquilidad, puede haber alguien más en casa durante la sesión.</p></div>
+<div><button>¿A qué zonas voy?</button><p>Atiendo en Benito Juárez y Coyoacán, CDMX. Si estás cerca de esas zonas, escríbeme y vemos si puedo llegar.</p></div>
+<div><button>¿Necesito tener camilla?</button><p>No. Llevo camilla profesional, sábanas limpias y todo lo necesario. Solo necesito un espacio libre de unos 2x2 metros.</p></div>
+<div><button>¿Atiendes hombres y mujeres?</button><p>Sí, atiendo a todo el público con respeto y límites profesionales claros.</p></div>
+</div></section>
+
+<div class="cta">
+<h2>Reserva tu masaje a domicilio</h2>
+<p>Escríbeme por WhatsApp y te confirmo disponibilidad.</p>
+<a href="https://wa.me/524437339948?text=Hola%2C%20quiero%20agendar%20mi%20sesi%C3%B3n." class="btn" target="_blank" rel="noopener"><i data-lucide="send"></i> Contactar por WhatsApp</a>
+</div>
+<footer>© 2026 STILLNESS Massage &amp; Wellness · CDMX</footer>
+
+<div class="lb" id="lb"><button aria-label="Cerrar">×</button><img alt=""></div>
+<script>
+window.lucide&&lucide.createIcons();
+document.querySelectorAll('.faq button').forEach(function(b){b.onclick=function(){var d=b.parentElement,p=b.nextElementSibling,o=d.classList.toggle('open');p.style.maxHeight=o?p.scrollHeight+'px':0}});
+var lb=document.getElementById('lb'),li=lb.querySelector('img');
+document.querySelectorAll('.imgw').forEach(function(w){w.onclick=function(){var i=w.querySelector('img');li.src=i.src;li.alt=i.alt;lb.classList.add('on')}});
+lb.onclick=function(){lb.classList.remove('on')};
+</script>
+</body>
+</html>
